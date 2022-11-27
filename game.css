@@ -1,0 +1,57 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    background-color: hsla(89, 43%, 51%, 0.3);; 
+}
+/* h1 {
+    text-align: center;
+    text-align: center; 
+    
+}*/
+section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 6rem);
+    grid-template-rows: repeat(6, 6rem);
+    grid-gap: 1rem;
+    perspective: 800px;
+}
+
+
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .5s ease ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }    
+
+  .face, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    /*backface-visibility: hidden; */
+    
+  }
+  .face{
+    background-color: white;
+
+  }
+
+   .back {
+    background-color: white;
+    backface-visibility: hidden;
+    /* transform: rotateY(0deg); */
+  }
+  .clicked {
+    transform: rotateY(180deg);
+
+  }
